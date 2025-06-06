@@ -1,4 +1,4 @@
-# format & indent Demo
+# Format & Indent Demo
 
 See [the library’s README](https://github.com/transpect/xslt-util/blob/master/format-indent/README.md) for Saxon version requirements.
 
