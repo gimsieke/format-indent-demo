@@ -23,17 +23,13 @@
     </sec>
     <sec id="preformat">
       <title>Preformatted Text</title>
-      <preformat>  This text
+      <preformat>  
+  This text
   must retain
   its whitespace</preformat>
       <preformat>  
 This is also true for very long lines that are in an element that is declared space-preserving by the schema. Even after 140 characters the line must be preserved in its 
 entirety.</preformat>
-      <p xml:space="preserve">Although 
-an explicit <monospace>xml:space</monospace> attribute
-is not allowed
-in JATS, we try
-its effect here.</p>
     </sec>
     <sec id="mathml">
       <title>MathML</title>
