@@ -12,7 +12,7 @@ See [the library’s README](https://github.com/transpect/xslt-util/blob/master/
 ## Requirement
 
 - Apply batch format&indenting prior to opening the document
-- Mixed content must be respected. For instance, don’t convert `<p><i>I</i><b>B</b></p>` to
+- Significant whitespace in mixed content must be respected. For instance, don’t convert `<p><i>I</i><b>B</b></p>` to
 
   ```xml
   <p>
