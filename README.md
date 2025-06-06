@@ -22,6 +22,26 @@ See [the library’s README](https://github.com/transpect/xslt-util/blob/master/
   ```
   since it introduces extra whitespace.  
 
+## Run the demo
+
+```bash
+#!/bin/bash
+
+set -x
+
+# Remove formatting (apart from preformat):
+saxon-PE127 -s:jats-article.xml \
+	    -xsl:xslt-util/format-indent/xsl/undo-format-indent.xsl \
+	    +schema-docs=JATS/1.4/rng/JATS-journalpublishing1-4-mathml3.rng \
+	    -o:jats-article.noindent.xml
+# Format & indent (apart from preformat):
+saxon-PE127 -s:jats-article.noindent.xml \
+	    -xsl:xslt-util/format-indent/xsl/format-indent.xsl \
+	    -o:jats-article.formatted.xml \
+	    +schema-docs=JATS/1.4/rng/JATS-journalpublishing1-4-mathml3.rng \
+	    target-line-length=80
+```
+
 ## Approach
 
 - Analyze an XSD or RNG version of the schema  
