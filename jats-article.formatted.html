@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>XML Source rendering</title><style>div.xmlsrc {
+  width: 100%;
+  height: auto;
+  overflow: scroll;
+  white-space: pre;
+  /* margin-top: 2em;  */
+  border: 3px solid #eee;
+  font-family: Consolas, monospace;
+  font-weight: normal;
+  font-size: 90%;
+  scrollbar-width: auto;
+  padding-bottom: 0.5em;
+}
+div.textlist {
+  max-height:300px;
+  overflow:scroll;
+}
+
+div.xmlsrc .name.elt { color: #55e; }
+div.xmlsrc .name.att { color: #e95; }
+div.xmlsrc .namespace.att { color: #9af; }
+div.xmlsrc .val.att { color: #a66; }
+div.xmlsrc .comment { color: #474; }
+div.xmlsrc .pi { color: #a6a; }
+div.xmlsrc .unselectable { color: #aaa !important; }
+
+.xmlsrc-container {
+  width: 95%;
+  position: absolute; bottom:0;
+  position: sticky;
+  bottom: 3vh;
+  flex-shrink:0;
+  margin-left: 1rem;
+  height: 10em;
+}
+.xmlsrc-container iframe {
+  width:100%;
+  height:100%;
+}
+
+body.xmlsrc {
+  margin:0;
+}</style></head><body class="xmlsrc"><div class="xmlsrc"><span class="name elt">&lt;article</span><span><span class="namespace att"> xmlns:mml</span><span class="name att">=</span><span class="val att">"http://www.w3.org/1998/Math/MathML"</span></span><span class="name elt">&gt;</span>
+  <span class="name elt">&lt;front</span><span class="name elt">&gt;</span>
+    <span class="name elt">&lt;journal-meta</span><span class="name elt">&gt;</span>
+      <span class="name elt">&lt;journal-id</span> <span><span class="name att">assigning-authority</span><span class="val att">="me, myself, and I"</span></span> <span><span class="name att">journal-id-type</span><span class="val att">="custom"</span></span> <br /><span><span class="name att">specific-use</span><span class="val att">="use attributes in order to create a long line"</span></span><span class="name elt">/&gt;</span>
+      <span class="name elt">&lt;issn</span><span class="name elt">/&gt;</span>
+    <span class="name elt">&lt;/journal-meta&gt;</span>
+    <span class="name elt">&lt;article-meta</span><span class="name elt">&gt;</span>
+      <span class="name elt">&lt;title-group</span><span class="name elt">&gt;</span>
+        <span class="name elt">&lt;article-title</span><span class="name elt">&gt;</span>Format&amp;amp;Indent Demo<span class="name elt">&lt;/article-title&gt;</span>
+      <span class="name elt">&lt;/title-group&gt;</span>
+    <span class="name elt">&lt;/article-meta&gt;</span><span class="comment">&lt;!-- a comment --&gt;</span>
+  <span class="name elt">&lt;/front&gt;</span>
+  <span class="name elt">&lt;body</span><span class="name elt">&gt;</span>
+    <span class="name elt">&lt;sec</span> <span><span class="name att">id</span><span class="val att">="intro"</span></span><span class="name elt">&gt;</span>
+      <span class="name elt">&lt;title</span><span class="name elt">&gt;</span>Introduction<span class="name elt">&lt;/title&gt;</span>
+      <span class="name elt">&lt;p</span><span class="name elt">&gt;</span><span class="name elt">&lt;italic</span><span class="name elt">&gt;</span>No format&amp;amp;indent must be done <span class="name elt">&lt;/italic&gt;</span><span class="name elt">&lt;bold</span><span class="name elt">&gt;</span>between the elements
+        in this paragraph <span class="name elt">&lt;/bold&gt;</span><span class="name elt">&lt;italic</span><span class="name elt">&gt;</span>even though heuristics that only look for
+        non-whitespace text children of <span class="name elt">&lt;monospace</span><span class="name elt">&gt;</span>p<span class="name elt">&lt;/monospace&gt;</span> might do so.<span class="name elt">&lt;/italic&gt;</span><span class="name elt">&lt;/p&gt;</span>
+      <span class="name elt">&lt;boxed-text</span><span class="name elt">&gt;</span>
+        <span class="name elt">&lt;p</span><span class="name elt">&gt;</span><span class="pi">&lt;?some rather long processing instruction whose length easily exceeds 120 characters even when not taking its name into account?&gt;</span><span class="name elt">&lt;/p&gt;</span>
+      <span class="name elt">&lt;/boxed-text&gt;</span>
+    <span class="name elt">&lt;/sec&gt;</span>
+    <span class="name elt">&lt;sec</span> <span><span class="name att">id</span><span class="val att">="preformat"</span></span><span class="name elt">&gt;</span>
+      <span class="name elt">&lt;title</span><span class="name elt">&gt;</span>Preformatted Text<span class="name elt">&lt;/title&gt;</span>
+      <span class="name elt">&lt;preformat</span><span class="name elt">&gt;</span>  This text
+  must retain
+  its whitespace<span class="name elt">&lt;/preformat&gt;</span>
+      <span class="name elt">&lt;preformat</span><span class="name elt">&gt;</span>  
+This is also true for very long lines that are in an element that is declared space-preserving by the schema. Even after 140 characters the line must be preserved in its 
+entirety.<span class="name elt">&lt;/preformat&gt;</span>
+      <span class="name elt">&lt;p</span> <span><span class="name att">xml:space</span><span class="val att">="preserve"</span></span><span class="name elt">&gt;</span>Although 
+an explicit <span class="name elt">&lt;monospace</span><span class="name elt">&gt;</span>xml:space<span class="name elt">&lt;/monospace&gt;</span> attribute
+is not allowed
+in JATS, we try
+its effect here.<span class="name elt">&lt;/p&gt;</span>
+    <span class="name elt">&lt;/sec&gt;</span>
+    <span class="name elt">&lt;sec</span> <span><span class="name att">id</span><span class="val att">="mathml"</span></span><span class="name elt">&gt;</span>
+      <span class="name elt">&lt;title</span><span class="name elt">&gt;</span>MathML<span class="name elt">&lt;/title&gt;</span>
+      <span class="name elt">&lt;p</span><span class="name elt">&gt;</span><span class="name elt">&lt;disp-formula</span> <span><span class="name att">id</span><span class="val att">="f1"</span></span><span class="name elt">&gt;</span><span class="name elt">&lt;label</span><span class="name elt">&gt;</span>(1)<span class="name elt">&lt;/label&gt;</span> <span class="name elt">&lt;mml:math</span> <span><span class="name att">display</span><span class="val att">="block"</span></span><span class="name elt">&gt;</span>
+        <span class="name elt">&lt;mml:mfrac</span><span class="name elt">&gt;</span>
+          <span class="name elt">&lt;mml:mrow</span><span class="name elt">&gt;</span>
+            <span class="name elt">&lt;mml:msup</span><span class="name elt">&gt;</span>
+              <span class="name elt">&lt;mml:mi</span><span class="name elt">&gt;</span>a<span class="name elt">&lt;/mml:mi&gt;</span>
+              <span class="name elt">&lt;mml:mn</span><span class="name elt">&gt;</span>2<span class="name elt">&lt;/mml:mn&gt;</span>
+            <span class="name elt">&lt;/mml:msup&gt;</span>
+            <span class="name elt">&lt;mml:mo</span><span class="name elt">&gt;</span>+<span class="name elt">&lt;/mml:mo&gt;</span>
+            <span class="name elt">&lt;mml:msup</span><span class="name elt">&gt;</span>
+              <span class="name elt">&lt;mml:mi</span><span class="name elt">&gt;</span>b<span class="name elt">&lt;/mml:mi&gt;</span>
+              <span class="name elt">&lt;mml:mn</span><span class="name elt">&gt;</span>2<span class="name elt">&lt;/mml:mn&gt;</span>
+            <span class="name elt">&lt;/mml:msup&gt;</span>
+          <span class="name elt">&lt;/mml:mrow&gt;</span>
+          <span class="name elt">&lt;mml:msqrt</span><span class="name elt">&gt;</span>
+            <span class="name elt">&lt;mml:msup</span><span class="name elt">&gt;</span>
+              <span class="name elt">&lt;mml:mi</span><span class="name elt">&gt;</span>a<span class="name elt">&lt;/mml:mi&gt;</span>
+              <span class="name elt">&lt;mml:mn</span><span class="name elt">&gt;</span>2<span class="name elt">&lt;/mml:mn&gt;</span>
+            <span class="name elt">&lt;/mml:msup&gt;</span>
+            <span class="name elt">&lt;mml:mo</span><span class="name elt">&gt;</span>-<span class="name elt">&lt;/mml:mo&gt;</span>
+            <span class="name elt">&lt;mml:msup</span><span class="name elt">&gt;</span>
+              <span class="name elt">&lt;mml:mi</span><span class="name elt">&gt;</span>b<span class="name elt">&lt;/mml:mi&gt;</span>
+              <span class="name elt">&lt;mml:mn</span><span class="name elt">&gt;</span>2<span class="name elt">&lt;/mml:mn&gt;</span>
+            <span class="name elt">&lt;/mml:msup&gt;</span>
+          <span class="name elt">&lt;/mml:msqrt&gt;</span>
+        <span class="name elt">&lt;/mml:mfrac&gt;</span><span class="name elt">&lt;/mml:math&gt;</span><span class="name elt">&lt;/disp-formula&gt;</span>
+        <span class="name elt">&lt;/p&gt;</span>
+    <span class="name elt">&lt;/sec&gt;</span>
+  <span class="name elt">&lt;/body&gt;</span>
+<span class="name elt">&lt;/article&gt;</span></div></body></html>

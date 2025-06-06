@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="JATS/1.4/rng/JATS-journalpublishing1-4-mathml3.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><article xmlns:mml="http://www.w3.org/1998/Math/MathML"><front><journal-meta><journal-id assigning-authority="me, myself, and I" journal-id-type="custom" specific-use="use attributes in order to create a long line"/><issn/></journal-meta><article-meta><title-group><article-title>Format&amp;Indent Demo</article-title></title-group></article-meta><!-- a comment --></front><body><sec id="intro"><title>Introduction</title><p><italic>No format&amp;indent must be done </italic><bold>between the elements in this paragraph </bold><italic>even though heuristics that only look for non-whitespace text children of <monospace>p</monospace> might do so.</italic></p><boxed-text><p><?some rather long processing instruction whose length easily exceeds 120 characters even when not taking its name into account?></p></boxed-text></sec><sec id="preformat"><title>Preformatted Text</title><preformat>  This text
+  must retain
+  its whitespace</preformat><preformat>  
+This is also true for very long lines that are in an element that is declared space-preserving by the schema. Even after 140 characters the line must be preserved in its 
+entirety.</preformat><p xml:space="preserve">Although 
+an explicit <monospace>xml:space</monospace> attribute
+is not allowed
+in JATS, we try
+its effect here.</p></sec><sec id="mathml"><title>MathML</title><p><disp-formula id="f1"><label>(1)</label> <mml:math display="block"><mml:mfrac><mml:mrow><mml:msup><mml:mi>a</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:msup><mml:mi>b</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:mrow><mml:msqrt><mml:msup><mml:mi>a</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo>-</mml:mo><mml:msup><mml:mi>b</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:msqrt></mml:mfrac></mml:math></disp-formula> </p></sec></body></article>

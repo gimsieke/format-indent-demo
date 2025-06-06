@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!-- MODULE:    JATS BITS Multi-lingual Attribute Overrides -->
+<!-- VERSION:   ANSI/NISO JATS Version 1.4 (Z39.96-202x) -->
+<!-- DATE:      October 2024 -->
+<!---->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
+<!-- PUBLIC DOCUMENT TYPE DEFINITION -->
+<!-- TYPICAL INVOCATION -->
+<!--
+  "-//NLM//DTD JATS BITS Multi-lingual Attribute Overrides v1.4 20241031//EN"
+       Delivered as file "bits-multi-lingual-atts1-4.ent"
+-->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
+<!-- SYSTEM:     JATS DTD Suite -->
+<!---->
+<!-- PURPOSE:    Override all the content-element attribute lists -->
+<!-- in the BITS Embedded Index Term & Question/Answer -->
+<!-- modules to add the multi-lingual attributes. This -->
+<!-- is a separate module so that this module can be -->
+<!-- discarded if BITS adds multi-lingual modeling. -->
+<!---->
+<!-- TAG SET SPONSOR -->
+<!-- National Center for Biotechnology -->
+<!-- Information (NCBI) -->
+<!-- National Library of Medicine (NLM) -->
+<!---->
+<!-- CREATED FOR: -->
+<!-- This module was created for the JATS DTD Suite. -->
+<!-- Digital archives and publishers may use the -->
+<!-- DTD as is for markup of journal literature or -->
+<!-- related material for archiving and transferring -->
+<!-- such material between archives or create a -->
+<!-- custom XML DTD from the Suite for -->
+<!-- these purposes. -->
+<!---->
+<!-- This DTD is in the public domain. An organization -->
+<!-- that wishes to create its own DTD from the suite -->
+<!-- may do so without permission from NLM. -->
+<!---->
+<!-- The suite has been set up to be extended using a -->
+<!-- new DTD file and a new DTD-specific customization -->
+<!-- module to redefine the many Parameter Entities. -->
+<!-- Do not modify the suite directly or redistribute -->
+<!-- modified versions of the suite. -->
+<!---->
+<!-- In the interest of maintaining consistency and -->
+<!-- clarity for potential users, NLM requests: -->
+<!---->
+<!-- 1. If you create a DTD from the JATS DTD Suite -->
+<!-- and intend to stay compatible with the suite, -->
+<!-- then please include the following statement -->
+<!-- as a comment in all of your DTD modules: -->
+<!-- "Created from, and fully compatible with, -->
+<!-- the ANSI/NISO Z39.96 Journal Article Tag -->
+<!-- Suite (JATS)." -->
+<!---->
+<!-- 2. If you alter one or more modules of the suite, -->
+<!-- then please rename your version and all its -->
+<!-- modules to avoid any confusion with the -->
+<!-- original suite. Also, please include the -->
+<!-- following statement as a comment in all your -->
+<!-- DTD modules: -->
+<!-- "Based in part on, but not fully compatible -->
+<!-- with, the ANSI/NISO Z39.96 Journal Article -->
+<!-- Tag Suite (JATS)." -->
+<!---->
+<!-- ORIGINAL CREATION DATE: -->
+<!-- February 2015 -->
+<!---->
+<!-- CREATED BY: Mulberry Technologies, Inc. for the NISO Z39.96 -->
+<!-- Working Group. Mulberry Technologies was -->
+<!-- supported by National Center for Biotechnology -->
+<!-- Information (NCBI), a center of the US National -->
+<!-- Library of Medicine (NLM). -->
+<!---->
+<!-- The Journal Publishing DTD is built from the -->
+<!-- Journal Archiving and Interchange DTD Suite. -->
+<!---->
+<!-- Suggestions for refinements and enhancements to -->
+<!-- this DTD should be sent in email to: -->
+<!-- jats@ncbi.nlm.nih.gov -->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
+<!-- DTD VERSION/CHANGE HISTORY -->
+<!-- ============================================================= -->
+<!--
+  Version  Reason/Occasion                   (who) vx.x (yyyy-mm-dd)
+     ==============================================================
+  
+     ==============================================================
+-->
+<!-- ============================================================= -->
+<!-- PARAMETER ENTITIES FOR ATTRIBUTE VALUES -->
+<!-- Placed here (unchanged) because of the -->
+<!-- order of operation of PEs. -->
+<!-- ============================================================= -->
+<!-- TYPES OF ANSWERS -->
+<!--
+  Used to name the type of question or
+  question set.
+-->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <define name="answer-types">
+    <choice>
+      <value>essay</value>
+      <value>fill-in-the-blank</value>
+      <value>multi-select</value>
+      <value>multiple-choice</value>
+      <value>short-answer</value>
+      <value>true-false</value>
+      <value>custom</value>
+    </choice>
+  </define>
+  <!-- ============================================================= -->
+  <!-- ATTRIBUTE OVERRIDES FOR BITS MULTI-LINGUAL -->
+  <!-- EMBEDDED INDEX TERMS -->
+  <!-- ============================================================= -->
+  <!-- INDEX-TERM ATTRIBUTES -->
+  <!-- Attribute list for <index-term> element. -->
+  <!-- SEE ATTRIBUTES -->
+  <!-- Attribute list for <see> element. -->
+  <define name="see-atts">
+    <ref name="jats-common-atts"/>
+    <optional>
+      <attribute name="rid">
+        <data type="IDREFS"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="content-type"/>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+    <ref name="multi-lang-atts"/>
+    <optional>
+      <attribute name="vocab"/>
+    </optional>
+    <optional>
+      <attribute name="vocab-identifier"/>
+    </optional>
+    <optional>
+      <attribute name="vocab-term"/>
+    </optional>
+    <optional>
+      <attribute name="vocab-term-identifier"/>
+    </optional>
+  </define>
+  <!-- SEE-ALSO ATTRIBUTES -->
+  <!-- Attribute list for <see-also> element. -->
+  <define name="see-also-atts">
+    <ref name="jats-common-atts"/>
+    <optional>
+      <attribute name="rid">
+        <data type="IDREFS"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="content-type"/>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+    <ref name="multi-lang-atts"/>
+    <optional>
+      <attribute name="vocab"/>
+    </optional>
+    <optional>
+      <attribute name="vocab-identifier"/>
+    </optional>
+    <optional>
+      <attribute name="vocab-term"/>
+    </optional>
+    <optional>
+      <attribute name="vocab-term-identifier"/>
+    </optional>
+  </define>
+  <!-- ============================================================= -->
+  <!-- ATTRIBUTE OVERRIDES FOR BITS MULTI-LINGUAL -->
+  <!-- QUESTION/ANSWER ELEMENTS -->
+  <!-- ============================================================= -->
+  <!-- QUESTION ATTRIBUTES -->
+  <!-- Attributes for the <question> element -->
+  <define name="question-atts">
+    <ref name="jats-common-atts"/>
+    <optional>
+      <attribute name="question-response-type">
+        <choice>
+          <ref name="answer-types"/>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="custom-type"/>
+    </optional>
+    <optional>
+      <attribute name="content-type"/>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+    <ref name="multi-lang-atts"/>
+  </define>
+  <!-- QUESTION PREAMBLE ATTRIBUTES -->
+  <!--
+    Attributes for the <question-preamble> 
+    element
+  -->
+  <define name="question-preamble-atts">
+    <ref name="jats-common-atts"/>
+    <optional>
+      <attribute name="content-type"/>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+    <ref name="multi-lang-atts"/>
+  </define>
+  <!-- QUESTION WRAP ATTRIBUTES -->
+  <!-- Attributes for the <question-wrap> element -->
+  <define name="question-wrap-atts">
+    <ref name="jats-common-atts"/>
+    <optional>
+      <attribute name="audience"/>
+    </optional>
+    <optional>
+      <attribute name="content-type"/>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+    <ref name="multi-lang-atts"/>
+  </define>
+  <!-- QUESTION WRAP GROUP ATTRIBUTES -->
+  <!--
+    Attributes for the <question-wrap-group> 
+    element
+  -->
+  <define name="question-wrap-group-atts">
+    <ref name="jats-common-atts"/>
+    <optional>
+      <attribute name="audience"/>
+    </optional>
+    <optional>
+      <attribute name="content-type"/>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+    <ref name="multi-lang-atts"/>
+  </define>
+  <!-- ANSWER ATTRIBUTES -->
+  <!-- Attributes for the <answer> element -->
+  <define name="answer-atts">
+    <ref name="jats-common-atts"/>
+    <attribute name="pointer-to-question">
+      <data type="IDREFS"/>
+    </attribute>
+    <optional>
+      <attribute name="content-type"/>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+    <ref name="multi-lang-atts"/>
+  </define>
+  <!-- ANSWER SET ATTRIBUTES -->
+  <!-- Attributes for the <answer-set> element -->
+  <define name="answer-set-atts">
+    <ref name="jats-common-atts"/>
+    <optional>
+      <attribute name="content-type"/>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+    <ref name="multi-lang-atts"/>
+  </define>
+  <!-- EXPLANATION ATTRIBUTES -->
+  <!-- Attributes for the <explanation> element -->
+  <define name="explanation-atts">
+    <ref name="jats-common-atts"/>
+    <attribute name="pointer-to-explained">
+      <data type="IDREFS"/>
+    </attribute>
+    <optional>
+      <attribute name="content-type"/>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+    <ref name="multi-lang-atts"/>
+  </define>
+  <!-- OPTION ATTRIBUTES -->
+  <!-- Attributes for the <option> element -->
+  <define name="option-atts">
+    <ref name="jats-common-atts"/>
+    <optional>
+      <attribute name="correct">
+        <choice>
+          <value>yes</value>
+          <value>no</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="content-type"/>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+    <ref name="multi-lang-atts"/>
+  </define>
+</grammar>
+<!-- ================== End BITS Multi-lingual Attributes ======== -->
