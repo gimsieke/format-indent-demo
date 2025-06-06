@@ -1,4 +1,8 @@
-# Format & Indent Demo
+# XSLT Batch Format & Indent Demo
+
+Use `xsl:accumulator` for the line length and `xsl:iterate` to iterate over text node tokens.
+
+Respect significant whitespace and preformatted text.
 
 See [the library’s README](https://github.com/transpect/xslt-util/blob/master/format-indent/README.md) for Saxon version requirements.
 
