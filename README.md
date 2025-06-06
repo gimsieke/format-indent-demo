@@ -7,7 +7,8 @@ See [the library’s README](https://github.com/transpect/xslt-util/blob/master/
 - An unindented XML document with rather long lines is opened in an editor
 - The document has an associated schema (DTD, XSD, or RNG)
 - If the editor, unlike Oxygen, cannot do format&indent that respects the schema, it is hard to edit
-     
+- If the editor, like Notepad++, inserts additional whitespace (where it’s significant) or flattens preformatted text, the content will be marred
+          
 ## Requirement
 
 - Apply batch format&indenting prior to opening the document
