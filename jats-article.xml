@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="JATS/1.4/rng/JATS-journalpublishing1-4-mathml3.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model type="application/xml"  
+  href='JATS/1.4/rng/JATS-journalpublishing1-4-mathml3.rng' 
+  schematypens="http://relaxng.org/ns/structure/1.0"?>
 <article xmlns:mml="http://www.w3.org/1998/Math/MathML">
   <front>
     <journal-meta>

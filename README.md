@@ -46,6 +46,11 @@ saxon-PE127 -s:jats-article.noindent.xml \
 	    target-line-length=80
 ```
 
+demo.sh also contains invocations of [render-xml-source-as-html.xsl](https://github.com/transpect/xslt-util/blob/master/render-xml-source/xsl/render-xml-source-as-html.xsl) for the documents. It renders the source code as HTML. 
+
+`xml-model` processing instructions that refer to RNG schemas will be considered, making the `schema-docs` document parameter unnecessary if such PIs are present. The same is true for `/*/xsi:schemaLocation` attributes.
+
+
 ## Approach
 
 - Analyze an XSD or RNG version of the schema  
